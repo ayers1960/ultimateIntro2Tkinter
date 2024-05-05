@@ -13,7 +13,7 @@ class Extra(tk.Toplevel):
         self.attributes("-topmost",True)
 
         self.L1 = ttk.Label(self, text='A Label').pack()
-        self.B1 = ttk.Button(self, text='A Button').pack()    
+        self.B1 = ttk.Button(self, text='Close Button', command=self.destroy).pack()    
         self.L2 = ttk.Label(self, text='A Label').pack(expand=True)
 
 
