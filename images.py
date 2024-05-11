@@ -29,6 +29,7 @@ def stretch_image(event):
         image=resizedTk,
         anchor='nw'
     )
+    canvas.bind('<Configure>', stretch_image)
 
 def fill_image(event):
     global resized_tk
@@ -50,6 +51,7 @@ def fill_image(event):
         int(event_height/2),
         anchor='center',
         image=resized_tk)
+    canvas.bind('<Configure>', fill_image)             
 
 
 def show_full_image(event):
@@ -73,6 +75,7 @@ def show_full_image(event):
         int(event_height/2),
         anchor='center',
         image=resized_tk)
+    canvas.bind('<Configure>', show_full_image)        
 
 #setup 
 window = tk.Tk()
